@@ -497,3 +497,61 @@ small{
         font-size: 24px;
     }
 }
+/* For Mobile Devices */
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-menu input[type="checkbox"] {
+    display: none;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.hamburger-menu .menu-icon {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* On Mobile Screen (max-width: 700px) */
+@media(max-width: 700px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links-mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #f44336;
+        padding-top: 60px;
+        display: none;
+        z-index: 2;
+    }
+
+    .nav-links-mobile ul {
+        padding: 30px;
+        list-style: none;
+        text-align: left;
+    }
+
+    .nav-links-mobile ul li {
+        padding: 10px;
+    }
+
+    /* When the checkbox is checked, show the mobile menu */
+    #menu-toggle:checked + .menu-icon + .nav-links-mobile {
+        display: block;
+    }
+}
